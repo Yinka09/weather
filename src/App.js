@@ -1,15 +1,14 @@
 import "./App.css";
-import Weather from "./Weather";
+import Header from "./components/Header.jsx";
+import Main from "./pages/Main.jsx";
+import Footer from "./components/Footer.jsx";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hello World</h1>
-        <Weather city="Calabar" />
-      </header>
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }
-
-export default App;
