@@ -35,7 +35,7 @@ main {
 }
 
 .weather-app-temp {
-  font-size: 88px;
+  font-size: 70px;
   font-weight: bold;
   color: whitesmoke;
   line-height: 88px;
@@ -47,7 +47,68 @@ main {
   color: whitesmoke;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 1500px) {
+  .weather-app-emoji {
+    font-size: 55px;
+    position: relative;
+    margin-right: 10px;
+    top: -15px;
+  }
+
+  .weather-app-temp {
+    font-size: 90px;
+    font-weight: bold;
+    color: whitesmoke;
+    line-height: 75px;
+  }
+
+  .weather-app-city {
+    margin-bottom: 20px;
+    font-size: 53px;
+    line-height: 48px;
+    color: whitesmoke;
+  }
+
+  .weather-app-details {
+    font-size: 22px;
+    line-height: 24px;
+    color: #a9a6b3;
+    font-weight: 400;
+  }
+
+  .weather-app-details strong {
+    color: #f65282;
+    font-weight: 500;
+  }
+
+  .weather-app-temp-cont {
+    display: flex;
+  }
+
+  .weather-app-temp-unit {
+    font-size: 45px;
+    position: relative;
+    top: -15px;
+    margin-right: 18px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 991.98px) {
+  .weather-app-emoji {
+    font-size: 30px;
+    position: relative;
+    top: -15px;
+  }
+
+  .weather-app-temp {
+    font-size: 60px;
+    font-weight: bold;
+    color: whitesmoke;
+    line-height: 68px;
+  }
+}
+
+@media (max-width: 700px) {
   .weather-app-city {
     margin: 0;
     font-size: 28px;
