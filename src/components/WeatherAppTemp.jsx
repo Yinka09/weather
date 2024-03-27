@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "../styles/WeatherApp.css";
 import "../styles/WeatherForecast.css";
 import "../styles/WeatherApp.css";
@@ -14,7 +15,7 @@ export default function WeatherAppTemp(props) {
       temperature: response.data.main.temp,
       cityName: response.data.name,
       wind: response.data.wind.speed,
-      dateTime: "Friday 18:00",
+      dateTime: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
@@ -29,7 +30,9 @@ export default function WeatherAppTemp(props) {
             {weatherData.cityName}
           </h1>
           <p className="weather-app-details">
-            <span id="date-time">{weatherData.dateTime}</span>
+            <span id="date-time">
+              <FormattedDate date={weatherData.dateTime} />
+            </span>
             <span id="description">, {weatherData.description}</span>
             <br />
             Humidity: <strong id="humidity">{weatherData.humidity}%</strong>,
