@@ -10,6 +10,7 @@ export default function Header() {
           placeholder="Enter a city..."
           className="col-9 search-form-input "
           id="search-form-input"
+          autoFocus="on"
           required
         />
         <input
