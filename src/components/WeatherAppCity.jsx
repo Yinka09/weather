@@ -2,16 +2,9 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import "../styles/WeatherApp.css";
 import "../styles/WeatherForecast.css";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherAppCity(props) {
-  // let props.data = {
-  //   cityName: "Lagos",
-  //   dateTime: "Friday 18:00",
-  //   description: "scattered clouds",
-  //   humidity: "74",
-  //   wind: "6.17",
-  // };
-
   return (
     <div className="weather-app-data">
       <div>
@@ -30,11 +23,8 @@ export default function WeatherAppCity(props) {
       </div>
       <div className="weather-app-temp-cont">
         <div className="weather-app-temp" id="weather-app-temp">
-          <img
-            className="weather-app-emoji"
-            src={props.data.iconUrl}
-            alt={props.data.description}
-          />
+          <WeatherIcon code={props.data.icon} />
+
           {/* <span className="weather-app-emoji">☀️</span> */}
           {Math.round(props.data.temperature)}
         </div>
