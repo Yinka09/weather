@@ -1,11 +1,11 @@
 import React from "react";
-import WeatherAppData from "../components/WeatherAppData";
+import WeatherAppTemp from "../components/WeatherAppTemp";
 import WeatherForecast from "../components/WeatherForecast";
 
 export default function Main() {
   return (
     <main>
-      <WeatherAppData />
+      <WeatherAppTemp defaultCity="Lagos" />
       <WeatherForecast />
     </main>
   );

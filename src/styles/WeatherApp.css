@@ -1,11 +1,7 @@
-main {
-  padding: 30px 0;
-  border-bottom: 1px solid rgba(249, 247, 254, 0.5);
-}
-
 .weather-app-data {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .weather-app-city {
@@ -179,13 +175,13 @@ main {
   }
 
   .weather-app-emoji {
-    height: 30px;
+    height: 15px;
     position: relative;
-    top: -8px;
+    top: -2px;
   }
 
   .weather-app-temp {
-    font-size: 28px;
+    font-size: 25px;
     font-weight: bold;
     color: whitesmoke;
     position: relative;
@@ -193,9 +189,9 @@ main {
   }
   .weather-app-temp-unit {
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 15px;
     color: whitesmoke;
     position: relative;
-    top: -5px;
+    top: -1px;
   }
 }
