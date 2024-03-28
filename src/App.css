@@ -4,6 +4,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   font-family: "Roboto", sans-serif;
+  color: white;
 }
 
 .App {
@@ -17,4 +18,10 @@ body {
 
 a {
   color: rgba(246, 82, 130, 0.8);
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }

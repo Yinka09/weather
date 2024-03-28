@@ -3,11 +3,12 @@ import FormattedDate from "./FormattedDate";
 import "../styles/WeatherApp.css";
 import "../styles/WeatherForecast.css";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherAppCity(props) {
   return (
-    <div className="weather-app-data">
-      <div>
+    <div className="weather-app-data container">
+      <div className="col-6">
         <h1 className="weather-app-city" id="weather-app-city">
           {props.data.cityName}
         </h1>
@@ -21,14 +22,13 @@ export default function WeatherAppCity(props) {
           <strong id="wind-value"> {props.data.wind}km/h</strong>
         </p>
       </div>
-      <div className="weather-app-temp-cont">
+      <div className="weather-app-temp-cont col-6 justify-content-end">
         <div className="weather-app-temp" id="weather-app-temp">
           <WeatherIcon code={props.data.icon} />
-
-          {/* <span className="weather-app-emoji">☀️</span> */}
-          {Math.round(props.data.temperature)}
         </div>
-        <div className="weather-app-temp-unit">°C</div>
+        <div>
+          <WeatherTemperature celsius={props.data.temperature} />
+        </div>
       </div>
     </div>
   );
