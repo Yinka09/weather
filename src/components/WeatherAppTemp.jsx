@@ -4,6 +4,7 @@ import "../styles/Header.css";
 import "../styles/WeatherApp.css";
 import "../styles/WeatherForecast.css";
 import WeatherAppCity from "./WeatherAppCity";
+import WeatherForecast from "./WeatherForecast";
 
 export default function WeatherAppTemp(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -13,6 +14,7 @@ export default function WeatherAppTemp(props) {
     console.log(response);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       cityName: response.data.name,
       wind: response.data.wind.speed,
@@ -52,19 +54,21 @@ export default function WeatherAppTemp(props) {
               onChange={handleChange}
               type="search"
               placeholder="Enter a city..."
-              className="col-9 search-form-input "
+              className="col-8 col-xl-9 search-form-input "
               id="search-form-input"
               autoFocus="on"
               required
             />
+
             <input
               type="submit"
               value="Search"
-              className="col-2 search-form-button"
+              className="col-3 search-form-button"
             />
           </form>
         </header>
         <WeatherAppCity data={weatherData} />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {

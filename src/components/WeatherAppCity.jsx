@@ -24,7 +24,7 @@ export default function WeatherAppCity(props) {
       </div>
       <div className="weather-app-temp-cont col-6 justify-content-end">
         <div className="weather-app-temp" id="weather-app-temp">
-          <WeatherIcon code={props.data.icon} />
+          <WeatherIcon code={props.data.icon} size={58} />
         </div>
         <div>
           <WeatherTemperature celsius={props.data.temperature} />

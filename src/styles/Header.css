@@ -1,6 +1,6 @@
 header {
   border-bottom: 1px solid rgba(249, 247, 254, 0.5);
-
+  margin-top: 20px;
   padding: 0 0 30px 0;
 }
 
@@ -44,7 +44,7 @@ header {
   }
 }
 
-@media (min-width: 1400px) and (max-width: 1550px) {
+@media (min-width: 1400px) and (max-width: 1665px) {
   .search-form-button {
     width: 200px;
     background-color: #f65282;
@@ -62,18 +62,27 @@ header {
 }
 
 @media (max-width: 900px) {
+  header {
+    margin-top: 10px;
+  }
   .search-form-input {
-    padding: 5px 10px;
+    padding: 15px 10px;
     width: 70%;
     margin-right: 0;
   }
 
   .search-form-button {
-    padding: 5px 5px;
-    font-size: 12px;
+    padding: 15px 5px;
+    font-size: 16px;
     margin-left: 10px;
     margin-right: 0;
     width: 25%;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 500px) {
+  .search-form-button {
+    font-size: 12px;
   }
 }
 
