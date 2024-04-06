@@ -9,7 +9,7 @@ export default function WeatherAppCity(props) {
   return (
     <div className="weather-app-data container">
       <div className="col-6">
-        <h1 className="weather-app-city" id="weather-app-city">
+        <h1 className="weather-app-city pb-3 pb-sm-0" id="weather-app-city">
           {props.data.cityName}
         </h1>
         <p className="weather-app-details">

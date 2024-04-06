@@ -168,31 +168,50 @@
 }
 
 @media (max-width: 500px) {
+  .weather-app-city {
+    margin: 0;
+    font-size: 40px;
+    line-height: 48px;
+    color: whitesmoke;
+  }
+
+  .weather-app-details {
+    font-size: 14px;
+    line-height: 24px;
+    color: #a9a6b3;
+    font-weight: 400;
+  }
   .weather-app-emoji {
-    height: 30px;
+    height: 50px;
     position: relative;
     top: -8px;
   }
 
   .weather-app-temp {
-    font-size: 30px;
     font-weight: bold;
     color: whitesmoke;
     position: relative;
     top: -10px;
   }
+
+  .weather-temp-value {
+    position: relative;
+    top: -2px;
+    font-size: 40px;
+    margin-right: 5px;
+  }
   .weather-app-temp-unit {
-    font-size: 8px;
+    font-size: 12px;
     color: whitesmoke;
     position: relative;
-    top: -16px;
+    top: -20px;
   }
 
   .weather-app-temp canvas {
     height: 25px;
     width: 25px;
     position: relative;
-    top: 2px;
+    top: -6px;
     padding-right: 3px;
   }
 }
@@ -245,13 +264,14 @@
   .weather-temp-value {
     position: relative;
     top: -2px;
-    font-size: 22px;
+    font-size: 40px;
+    margin-right: 5px;
   }
   .weather-app-temp-unit {
     margin-top: 10px;
-    font-size: 8px;
+    font-size: 13px;
     color: whitesmoke;
     position: relative;
-    top: -12px;
+    top: -18px;
   }
 }

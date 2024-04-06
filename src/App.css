@@ -25,3 +25,9 @@ a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
+
+@media (max-width: 500px) {
+  .App {
+    max-width: 95%;
+  }
+}
